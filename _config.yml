@@ -1,0 +1,34 @@
+title: "NLP lab at UET"
+author: "NLP lab"
+description: "An awesome NLP lab"
+permalink: /:title/
+lang: "en"
+
+show_footer: false           # show the "previous" and "next" links at the end of each post
+dark_theme: false            # use the dark mode as default
+dark_header: true            # keep the header dark
+dark_footer: false           # keep the footer dark
+#style: minimal             # use a simpler style inspired by the minima theme
+
+navigation:                  # site navigation in the header
+  - Giới Thiệu: /
+  - News.md
+  - Members.md
+  - Publications.md
+  - Resources.md
+  - Recruitment.md
+  - Contact.md
+  
+
+#icons:                      # icons in the header, see http://fontawesome.com/icons
+#  envelope: "mailto:niklasbuschmann@users.noreply.github.com"
+#  github: "https://github.com/niklasbuschmann/contrast"
+#  rss: "/contrast/feed.xml"
+
+comments:                    # embed disqus or isso comments
+#  disqus: ""
+#  isso: ""
+
+plugins:
+ - jekyll-feed
+ - jekyll-default-layout
