@@ -34,20 +34,14 @@
   <h2><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h2>
   {% if site.navigation %}
     <nav>      
-    {% for path in site.navigation %}
-      {% if path.first %}
-        <a href="{{ path.first[1] }}">{{ path.first[0] }}</a>
-      {% else %}
-        {% assign node = site.pages | where: "name", path | first %}
-        <a href="{{ node.url | relative_url }}">{{ node.title }}</a>
-      {% endif %}     
-    {% endfor %}
-      <select class="form-control form-control-sm" style="float: right;">
-        <option>Vietnamese</option>
-        <option>Japanese</option>
-        <option>English</option>
-        <option>French</option>
-      </select>
+      {% for path in site.navigation %}
+        {% if path.first %}
+          <a href="{{ path.first[1] }}">{{ path.first[0] }}</a>
+        {% else %}
+          {% assign node = site.pages | where: "name", path | first %}
+          <a href="{{ node.url | relative_url }}">{{ node.title }}</a>
+        {% endif %}     
+      {% endfor %}      
     </nav>
   {% endif %}
   {% if site.icons %}
@@ -61,6 +55,12 @@
     {% endfor %}
     </nav>
   {% endif %}
+  <select class="form-control form-control-sm" style="float: right;">
+    <option>Vietnamese</option>
+    <option>Japanese</option>
+    <option>English</option>
+    <option>French</option>
+  </select>
 </header>
 
 {{ content }}
