@@ -30,21 +30,15 @@
   </script>
 {% endif %}
 
-<header>
-  <div class="row">    
-    <div class="col-md-8">
-      <h2><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h2> 
-    </div>
-    <div class="col-md-4">
-      <select class="form-control form-control-sm" 
-        style="width: 100px;">
-        <option>Vietnamese</option>
-        <option>Japanese</option>
-        <option>English</option>
-        <option>French</option>
-      </select>
-    </div>
-  </div>  
+<header>  
+    <select class="form-control form-control-sm" 
+        style="width: 250px; float: right;">
+      <option>Vietnamese</option>
+      <option>Japanese</option>
+      <option>English</option>
+      <option>French</option>
+    </select>
+    <h2><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h2>           
   {% if site.navigation %}
     <nav>      
       {% for path in site.navigation %}
