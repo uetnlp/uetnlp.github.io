@@ -31,14 +31,14 @@
 {% endif %}
 
 <header>  
+    <h2><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h2>
     <select class="form-control form-control-sm" 
         style="width: 250px; float: right;">
       <option>Vietnamese</option>
       <option>Japanese</option>
       <option>English</option>
       <option>French</option>
-    </select>
-    <h2><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h2>           
+    </select>               
   {% if site.navigation %}
     <nav>      
       {% for path in site.navigation %}
