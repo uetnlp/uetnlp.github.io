@@ -43,15 +43,7 @@
     </nav>
   {% endif %}
   {% if site.icons %}
-    <nav>
-    {% for link in site.icons %}
-      <a class="icon" href="{{ link[1] }}">
-        <svg>
-          <use xlink:href="{{ "/assets/fontawesome/icons.svg" | relative_url }}#{{ link[0] }}"></use>
-        </svg>
-        </a>
-    {% endfor %}
-    </nav>
+    
   {% endif %}
 </header>
 
