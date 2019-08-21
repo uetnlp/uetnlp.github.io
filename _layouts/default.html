@@ -40,14 +40,14 @@
       {% else %}
         {% assign node = site.pages | where: "name", path | first %}
         <a href="{{ node.url | relative_url }}">{{ node.title }}</a>
-      {% endif %}
-      <select class="form-control form-control-sm">
+      {% endif %}     
+    {% endfor %}
+      <select class="form-control form-control-sm" style="float: right;">
         <option>Vietnamese</option>
         <option>Japanese</option>
         <option>English</option>
         <option>French</option>
       </select>
-    {% endfor %}
     </nav>
   {% endif %}
   {% if site.icons %}
