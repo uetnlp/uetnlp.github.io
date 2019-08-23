@@ -1,5 +1,5 @@
 ---
-title: "Tin Tức"
+title: "Tin tức"
 permalink: "/news/"
 ---
 
