@@ -1,9 +1,9 @@
 ---
-title: "Thành Viên"
+title: "Thành viên"
 permalink: "/members/"
 ---
 
-# Thành Viên
+# Thành viên
 ---
 
 ## Giảng viên 
