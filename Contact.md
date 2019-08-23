@@ -3,7 +3,7 @@ title: "Liên hệ"
 permalink: "/contact/"
 ---
 
-# Liên Hệ
+# Liên hệ
 ---
 
 ### Địa chỉ 
