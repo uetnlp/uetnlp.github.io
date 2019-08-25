@@ -9,16 +9,16 @@
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="{{ "/assets/css/index.css" | relative_url }}">
-<link rel="stylesheet" href="{{ site.style | default: "theme" | prepend: "/assets/css/" | append: ".css" | relative_url }}">
+<link rel="stylesheet" href="{{ "/assets/css/index.css" | relative_url | prepend: site.baseurl_root }}">
+<link rel="stylesheet" href="{{ site.style | default: "theme" | prepend: "/assets/css/" | append: ".css" | relative_url | prepend: site.baseurl_root }}">
 {% if site.plugins contains "jekyll-feed" %}
   <link rel="alternate" type="application/atom+xml" 
-    href="{{ "/feed.xml" | relative_url }}" title="{{ site.title }}" />
+    href="{{ "/feed.xml" | relative_url | prepend: site.baseurl_root }}" title="{{ site.title }}" />
 {% endif %}
 {% if page.mathjax or site.mathjax %}
 <link rel="stylesheet" href="{{ "/assets/katex/katex.min.css" | relative_url }}">
-<script defer src="{{ "/assets/katex/katex.min.js" | relative_url }}"></script>
-<script defer src="{{ "/assets/katex/contrib/mathtex-script-type.min.js" | relative_url }}"></script>
+<script defer src="{{ "/assets/katex/katex.min.js" | relative_url | prepend: site.baseurl_root }}"></script>
+<script defer src="{{ "/assets/katex/contrib/mathtex-script-type.min.js" | relative_url | prepend: site.baseurl_root }}"></script>
 {% endif %}
 {% if site.comments.disqus %}
   <script src="//{{ site.comments.disqus }}.disqus.com/embed.js" async>
@@ -44,8 +44,11 @@
     <nav>      
       {% for path in site.navigation %}
         {% if path.first %}
-          <a href="{{ path.first[1] }}">{{ path.first[0] }}</a>
+          <p>{{ site.baseurl_root }}/en/{{ page.url}}</p>
+          <!-- {% capture link1 %}{{ site.baseurl_root }}/en/{{ page.url}}{% endcapture %}         -->
+          <a href="{{ path.first[1] }}">{{% path.first[0] %}}</a>          
         {% else %}
+          {% capture link2 %}{{ site.baseurl_root }}{{ page.url  }}{% endcapture %}
           {% assign node = site.pages | where: "name", path | first %}
           <a href="{{ node.url | relative_url }}">{{ node.title }}</a>
         {% endif %}     

@@ -3,6 +3,8 @@ author: "NLP lab"
 description: "An awesome NLP lab"
 permalink: /:title/
 lang: "en"
+languages: ["vi", "ja", "en", "fr"]
+exclude_from_localizations: ["javascript", "images", "css", "xml"]
 
 show_footer: false           # show the "previous" and "next" links at the end of each post
 dark_theme: false            # use the dark mode as default
@@ -32,3 +34,4 @@ comments:                    # embed disqus or isso comments
 plugins:
  - jekyll-feed
  - jekyll-default-layout
+ - jekyll-multiple-languages-plugin
