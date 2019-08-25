@@ -1,8 +1,8 @@
 ---
-title: "Công Bố Khoa Học"
+title: "Công bố khoa học"
 permalink: "/publications/"
 ---
-# Công Bố Khoa Học
+# Công bố khoa học
 ---
 
 

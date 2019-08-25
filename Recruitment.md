@@ -1,18 +1,18 @@
 ---
-title: "Tuyển Dụng"
+title: "Tuyển dụng"
 permalink: "/recruitment/"
 ---
-# Tuyển Dụng
+# Tuyển dụng
 ---
 
-## Sinh Viên
-#### Điều Kiện:
+## Sinh viên
+#### Điều kiện:
 * Sinh viên năm thứ ba, năm cuối
 
-#### Lợi Ích:
+#### Lợi ích:
 * Nghiên cứu giải quyết các bài toán có tính thời sự
 * Được tham gia sinh hoạt khoa học
 * Cơ hội thử thách, phát triển bản thân
 
-## Nghiên Cứu Sinh
+## Nghiên cứu sinh
 Vui lòng liên hệ trực tiếp

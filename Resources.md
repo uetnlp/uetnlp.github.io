@@ -1,11 +1,11 @@
 ---
-title: "Tài Nguyên"
+title: "Tài nguyên"
 permalink: "/resources/"
 ---
-# Tài Nguyên
+# Tài nguyên
 ---
 
-## Kho Ngữ Liệu
+## Kho ngữ liệu
 
 * Kho ngữ liệu tiếng Việt được chú giải cú pháp (Viettreebank)
 * Mạng từ (Wordnet) tiếng Việt
