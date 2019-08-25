@@ -43,12 +43,10 @@
   {% if site.navigation %}
     <nav>      
       {% for path in site.navigation %}
-        {% if path.first %}
-          <p>{{ site.baseurl_root }}/en/{{ page.url}}</p>
-          <!-- {% capture link1 %}{{ site.baseurl_root }}/en/{{ page.url}}{% endcapture %}         -->
+        {% if path.first %}                          
           <a href="{{ path.first[1] }}">{{% path.first[0] %}}</a>          
         {% else %}
-          {% capture link2 %}{{ site.baseurl_root }}{{ page.url  }}{% endcapture %}
+        <p>{% capture link2 %}{{ site.baseurl_root }}{{ page.url  }}{% endcapture %}</p>          
           {% assign node = site.pages | where: "name", path | first %}
           <a href="{{ node.url | relative_url }}">{{ node.title }}</a>
         {% endif %}     
