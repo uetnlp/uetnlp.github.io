@@ -45,12 +45,7 @@
       {% for path in site.navigation %}
         {% if path.first %}                          
           <a href="{{ path.first[1] }}">{{% path.first[0] %}}</a>          
-<<<<<<< HEAD
         {% else %}                  
-=======
-        {% else %}
-        <p>{% capture link2 %}{{ site.baseurl_root }}{{ page.url  }}{% endcapture %}</p>          
->>>>>>> parent of 3b80cf2... lang
           {% assign node = site.pages | where: "name", path | first %}
           <a href="{{ node.url | relative_url }}">{{ node.title }}</a>
         {% endif %}     
