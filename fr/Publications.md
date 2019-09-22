@@ -9,6 +9,12 @@ order: 3
 ---
 
 
+#### 2019
+* Thi-Vinh Ngo, Thanh-Le Ha, Phuong-Thai Nguyen and Le-Minh Nguyen. Overcoming the Rare Word Problem for low-resource language pairs in Neural Machine Translation. Accepted in WAT 2019.
+{: style="text-align: justify;"}
+* Bui Van Tan, Nguyen Phuong Thai, Pham Van Lam, Dinh Khac Quy. Antonyms-Synonyms Discrimination Based On Exploiting Rich Vietnamese Features. Accepted in PACLING 2019.
+{: style="text-align: justify;"}
+
 #### 2015
 * Hong-Quan Nguyen, Phuong-Thai Nguyen, Thanh-Quyen Nguyen and Van-Hiep Nguyen. Automatic Detection
 of Problematic Rules in Vietnamese Treebank. The 11th IEEE-RIFV International Conference on Computing
