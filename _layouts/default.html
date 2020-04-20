@@ -7,11 +7,17 @@
 <meta name="author" content="{{ page.author | default: site.author | escape }}">
 <meta name="generator" content="Jekyll v{{ jekyll.version }}">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
-<script src="/assets/js/jquery-3.2.1.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="/assets/js/default.js"></script>
+
 <link rel="stylesheet" type="text/css" href="/assets/css/custom_header.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- <script src="/assets/js/jquery-3.2.1.min.js"></script> -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<!-- <script src="/assets/js/bootstrap.min.js"></script> -->
+<!-- <link rel="stylesheet" href="/assets/css/bootstrap.min.css" /> -->
+<script src="/assets/js/default.js"></script>
 <link rel="stylesheet" href="{{ "/assets/css/index.css" | relative_url }}">
 <link rel="stylesheet" href="{{ site.style | default: "theme" | prepend: "/assets/css/" | append: ".css" | relative_url }}">
 
@@ -63,16 +69,42 @@
     </div>        
 
     <!-- Navigation -->
-    <div style="margin-top: 10px; width: 130%">
-      <nav>                       
-        {% assign pages=site.pages | where:"lang", page.lang | sort: 'order' %}
-        {% for node in pages %}
-          {% if node.title %}
-            <a href="{{ node.url }}">{{ node.title }}</a>
-          {% endif %}
-        {% endfor %}      
-      </nav>   
-
+    <div>
+      <nav class="navbar navbar-expand-lg" style="margin-bottom: -10px;">        
+          <!-- Brand and toggle get grouped for better mobile display -->          
+          <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
+            aria-expanded="false" aria-label="Toggle navigation" id="btn_menu">
+              <!-- <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span> -->
+              Menu
+          </button>          
+      
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="nav navbar-nav"> 
+                {% assign pages=site.pages | where:"lang", page.lang | sort: 'order' %}
+                {% for node in pages %}
+                  {% if node.title %}
+                    <li class="nav-item">
+                      <a href="{{ node.url }}">{{ node.title }}</a>
+                    </li>
+                  {% endif %}
+                {% endfor %}                                                 
+            </ul>
+            <!-- {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}             -->
+            <!-- <ul class="nav navbar-nav navbar-right" id="ul_lang">
+                {% for node in pages %}
+                  <li class="nav-item">
+                    <a class="{{ node.lang }}" 
+                      href="{{ node.url }}">{{ node.lang }}</a>
+                  </li>
+                {% endfor %}
+            </ul>             -->
+          </div><!-- /.navbar-collapse -->                        
+      </nav>
       {% if site.icons %}
         <nav>
         {% for link in site.icons %}
@@ -85,11 +117,11 @@
         </nav>
       {% endif %}  
     </div>
-  <!-- End Navigation -->  
+  <!-- End Navigation --> 
 </header>
 
 <div style="text-align: justify; text-justify: inter-word; 
-            margin-top: 150px;">
+            margin-top: 175px;">
 {{ content }}
 </div>
 
