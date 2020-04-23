@@ -52,7 +52,7 @@
 
       <div class="col-sm-3">
         <!-- Start define languages options -->    
-        {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}  
+        <!-- {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}  
         <div class="lang" style="margin-top: 7px;">
           <ul style="display: inline; color: yellow;">
             {% for node in pages %}
@@ -63,7 +63,7 @@
               </li>
             {% endfor %}
           </ul>
-        </div>    
+        </div>     -->
       </div>
       <!-- End -->
     </div>        
@@ -95,14 +95,14 @@
                 {% endfor %}                                                 
             </ul>
             <!-- {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}             -->
-            <!-- <ul class="nav navbar-nav navbar-right" id="ul_lang">
+            <ul class="nav navbar-nav navbar-right" id="ul_lang">
                 {% for node in pages %}
                   <li class="nav-item">
                     <a class="{{ node.lang }}" 
                       href="{{ node.url }}">{{ node.lang }}</a>
                   </li>
                 {% endfor %}
-            </ul>             -->
+            </ul>            
           </div><!-- /.navbar-collapse -->                        
       </nav>
       {% if site.icons %}
